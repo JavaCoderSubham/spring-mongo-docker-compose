@@ -1,0 +1,8 @@
+
+spring:
+  data:
+    mongodb:
+      database: book
+      host: mongodbdocker
+      port: 27017
+

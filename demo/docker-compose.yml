@@ -1,0 +1,14 @@
+version: "3.1"
+services:
+  mongodbdocker:
+    image: mongo:latest
+    container_name: "mongodbdocker"
+    ports:
+      - 27017:27017
+  springboot-mongo-demo:
+    image: springboot-mongo:1.0
+    container_name: "springboot-mongo-demo"
+    ports:
+      - 8080:8080
+    links:
+      - mongodbdocker
